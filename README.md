@@ -1,6 +1,6 @@
-# Atlantic Quantum Compiler
+# Atlantic Quantum - Shipyard
 
-Compiler developed by Atlantic Quantum to compile openQASM + openPulse code to vendor specific instructions. Currently supports compilation to Zurich Instruments SEQC, more instrument vendors will be supported in the future.
+Shipyard is an openQASM 3 compiler developed by Atlantic Quantum to compile openQASM + openPulse code to vendor specific instructions. Currently supports compilation to Zurich Instruments SEQC, more instrument vendors will be supported in the future.
 
 ## Status
 
