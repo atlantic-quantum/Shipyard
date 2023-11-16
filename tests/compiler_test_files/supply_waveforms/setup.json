@@ -1,0 +1,35 @@
+{
+    "Instruments": {
+        "hdawg1": {
+            "type": "HDAWG8",
+            "serial": "DEVXXXX"
+        },
+        "hdawg2": {
+            "type": "HDAWG8",
+            "serial": "DEVXXXX"
+        }
+    },
+    "Ports": {
+        "awg1_ch1": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 1,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "awg2_ch1": {
+            "instrument": "hdawg2",
+            "core": {
+                "type": "HD",
+                "index": 1,
+                "channels": [
+                    1
+                ]
+            }
+        }
+    },
+    "Frames": {}
+}

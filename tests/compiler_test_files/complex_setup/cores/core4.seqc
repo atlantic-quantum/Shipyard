@@ -1,0 +1,78 @@
+var feedback_bit;
+void _ZN5reset_PN0_QN1__0_R() {
+  playZero(2000000);
+}
+var _ZN7measure_PN0_QN1__0_RBIT() {
+  playZero(4800);
+  startQA(QA_GEN_0, QA_INT_0, true, 0x0, 0b0);
+  return getZSyncData(ZSYNC_DATA_RAW);
+}
+void _ZN3x90_PN0_QN1__0_R() {
+  playZero(64);
+}
+void _ZN1x_PN0_QN1__0_R() {
+  _ZN3x90_PN0_QN1__0_R();
+  _ZN3x90_PN0_QN1__0_R();
+}
+void _ZN5reset_PN0_QN1__1_R() {
+  playZero(2000000);
+}
+var _ZN7measure_PN0_QN1__1_RBIT() {
+  playZero(4800);
+  startQA(QA_GEN_1, QA_INT_1, true, 0x1, 0b0);
+  return getZSyncData(ZSYNC_DATA_RAW);
+}
+void _ZN3x90_PN0_QN1__1_R() {
+  playZero(64);
+}
+void _ZN3y90_PN0_QN1__1_R() {
+  _ZN3x90_PN0_QN1__1_R();
+}
+void _ZN5reset_PN0_QN1__2_R() {
+  playZero(2000000);
+}
+var _ZN7measure_PN0_QN1__2_RBIT() {
+  playZero(4800);
+  startQA(QA_GEN_2, QA_INT_2, true, 0x2, 0b0);
+  return getZSyncData(ZSYNC_DATA_RAW);
+}
+void _ZN3x90_PN0_QN1__2_R() {
+  playZero(64);
+}
+void _ZN6Idle90_PN0_QN1__2_R() {
+  playZero(64);
+}
+void _ZN1x_PN0_QN1__2_R() {
+  _ZN3x90_PN0_QN1__2_R();
+  _ZN3x90_PN0_QN1__2_R();
+}
+void _ZN4cnot_PN0_QN2__0__1_R() {
+  playZero(2000000);
+  playZero(2000000);
+}
+void _ZN6cphase_PN0_QN2__2__0_R() {
+  playZero(2000000);
+  playZero(2000000);
+}
+void _ZN9arb_pulse_PN0_QN1__0_R() {
+  playZero(32);
+}
+
+var shot_index;
+for ( shot_index = 0; shot_index < 99; shot_index = shot_index + 1 ) {
+  _ZN5reset_PN0_QN1__0_R();
+  _ZN5reset_PN0_QN1__1_R();
+  _ZN5reset_PN0_QN1__2_R();
+  _ZN1x_PN0_QN1__0_R();
+  _ZN3y90_PN0_QN1__1_R();
+  _ZN4cnot_PN0_QN2__0__1_R();
+  feedback_bit = _ZN7measure_PN0_QN1__1_RBIT();
+  if (feedback_bit) {
+    _ZN1x_PN0_QN1__2_R();
+  } else {
+    _ZN6Idle90_PN0_QN1__2_R();
+    _ZN6Idle90_PN0_QN1__2_R();
+  }
+  _ZN9arb_pulse_PN0_QN1__0_R();
+  _ZN6cphase_PN0_QN2__2__0_R();
+}

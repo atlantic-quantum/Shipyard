@@ -1,0 +1,10 @@
+void _ZN1x_PN0_QN1__0_R() {
+  playWave(1, ones(32) * 0.2);
+  playHold(2400 - 32);
+}
+void _ZN7measure_PN0_QN1__0_R() {
+  playZero(4800);
+}
+waitZSyncTrigger();
+_ZN1x_PN0_QN1__0_R();
+_ZN7measure_PN0_QN1__0_R();

@@ -1,0 +1,34 @@
+Instruments:
+  hdawg1:
+    serial: DEVXXXX
+    type: HDAWG8
+  hdawg2:
+    serial: DEVYYYY
+    type: HDAWG4
+  shfsg1:
+    serial: DEVZZZZ
+    type: SHFSG4
+  shfsg2:
+    serial: DEVAAAA
+    type: SHFSG8
+  shfqa1:
+    serial: DEVBBBB
+    type: SHFQA4
+  shfqa2:
+    serial: DEVCCCC
+    type: SHFQA2
+  shfqc1:
+    serial: DEVDDDD
+    type: SHFQC
+  shfqc2:
+    serial: DEVFFFF
+    type: SHFQC2
+  shfqc3:
+    serial: DEVGGGG
+    type: SHFQC4
+  shfqc4:
+    serial: DEVHHHH
+    type: SHFQC6
+  pqsc1:
+    serial: DEVEEEE
+    type: PQSC

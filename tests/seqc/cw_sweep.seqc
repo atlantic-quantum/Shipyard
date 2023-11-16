@@ -1,0 +1,15 @@
+const OSC0 = 0;
+setTrigger(0);
+
+configFreqSweep(OSC0, -1000000000.0, 2000000.0);
+
+for(var i = 0; i < 1000; i++) {
+    for(var j = 0; j < 200; j++) {
+        playZero(400);
+        setSweepStep(OSC0, i);
+        resetOscPhase();
+        playZero(400144);
+        setTrigger(1);
+        setTrigger(0);
+    }
+}

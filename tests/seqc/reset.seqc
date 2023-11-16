@@ -1,0 +1,4 @@
+void _ZN5reset_PN0_QN1__0_R() {
+  playZero(1000000);
+}
+_ZN5reset_PN0_QN1__0_R();

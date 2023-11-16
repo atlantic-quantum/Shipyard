@@ -1,0 +1,171 @@
+{
+    "abs": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "acos": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "acosh": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "asin": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "asinh": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "atan": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "atanh": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "cos": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "cosh": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "exp": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "ln": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "log": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "log2": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "log10": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "sign": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "sin": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "sinh": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "sqrt": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "tan": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "tanh": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "float"
+    },
+    "ceil": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "int"
+    },
+    "round": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "int"
+    },
+    "floor": {
+        "inputs": {
+            "value": "float"
+        },
+        "return_type": "int"
+    },
+    "avg": {
+        "inputs": {
+            "value": "array"
+        },
+        "return_type": "float"
+    },
+    "max": {
+        "inputs": {
+            "value": "array"
+        },
+        "return_type": "float"
+    },
+    "min": {
+        "inputs": {
+            "value": "array"
+        },
+        "return_type": "float"
+    },
+    "sum": {
+        "inputs": {
+            "value": "array"
+        },
+        "return_type": "float"
+    },
+    "pow": {
+        "inputs": {
+            "base": "float",
+            "exp": "float"
+        },
+        "return_type": "float"
+    }
+}

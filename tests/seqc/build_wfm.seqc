@@ -1,0 +1,13 @@
+const N = 1024;
+const width = 100;
+const position = N / 2;
+const f_start = 0.1;
+const f_stop = 0.2;
+wave w_array = zeros(N);
+
+cvar i;
+for ( i = 0; i < N; i = i + 1 ) {
+  w_array[i] = sin(10 / cosh((i - position) / width));
+}
+
+playWave(1, w_array);

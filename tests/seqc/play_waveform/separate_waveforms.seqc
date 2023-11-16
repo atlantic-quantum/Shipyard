@@ -1,0 +1,3 @@
+wave wave_real = gauss(620, 1.0, 320, 10);
+wave wave_imag = drag(620, 1.0, 320, 10);
+playWave(1, 2, wave_real, 1, 2, wave_imag);

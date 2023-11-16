@@ -1,0 +1,17 @@
+Frames:
+  frame1:
+    frequency: 0.0
+    phase: 0.0
+    port: ch1
+Instruments:
+  hdawg1:
+    serial: DEVXXXX
+    type: HDAWG8
+Ports:
+  ch1:
+    core:
+      channels:
+      - 1
+      index: 1
+      type: HD
+    instrument: hdawg1

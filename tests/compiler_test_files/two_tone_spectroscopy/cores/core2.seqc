@@ -1,0 +1,16 @@
+const frequency_start = -750000000.0;
+const frequency_step = 15000000.0;
+const n_steps = 100;
+void _ZN17measure_resonator_PN0_QN1__0_R() {
+  playZero(2016);
+}
+waitZSyncTrigger();
+
+cvar i;
+for ( i = 0; i < n_steps; i = i + 1 ) {
+  playZero(512);
+  setOscFreq(0, frequency_start + i * frequency_step);
+  playWave(1, 2, ones(32));
+  playHold(2016 - 32);
+  _ZN17measure_resonator_PN0_QN1__0_R();
+}

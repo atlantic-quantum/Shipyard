@@ -1,0 +1,8 @@
+const capture_time = 4000;
+var _ZN10measure_v2_PN0_QN1__0_RBIT() {
+  playZero(4000);
+  startQA(QA_GEN_0, QA_INT_0, true, 0x0, 0b0);
+  return getZSyncData(ZSYNC_DATA_RAW);
+}
+waitZSyncTrigger();
+_ZN10measure_v2_PN0_QN1__0_RBIT();

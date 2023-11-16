@@ -1,0 +1,168 @@
+{
+    "zeros": {
+        "inputs": {
+            "samples": "int"
+        },
+        "return_type": "waveform"
+    },
+    "ones": {
+        "inputs": {
+            "samples": "int"
+        },
+        "return_type": "waveform"
+    },
+    "sine": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "phase_offset": "angle",
+            "nr_of_periods": "float"
+        },
+        "return_type": "waveform"
+    },
+    "cosine": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "phase_offset": "angle",
+            "nr_of_periods": "float"
+        },
+        "return_type": "waveform"
+    },
+    "sinc": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "position": "int",
+            "beta": "float"
+        },
+        "return_type": "waveform"
+    },
+    "ramp": {
+        "inputs": {
+            "samples": "int",
+            "start_level": "float",
+            "stop_level": "float"
+        },
+        "return_type": "waveform"
+    },
+    "sawtooth": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "phase_offset": "angle",
+            "nr_of_periods": "float"
+        },
+        "return_type": "waveform"
+    },
+    "triangle": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "phase_offset": "angle",
+            "nr_of_periods": "float"
+        },
+        "return_type": "waveform"
+    },
+    "gauss": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "position": "int",
+            "width": "int"
+        },
+        "return_type": "waveform"
+    },
+    "drag": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "position": "int",
+            "width": "int"
+        },
+        "return_type": "waveform"
+    },
+    "blackman": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "alpha": "float"
+        },
+        "return_type": "waveform"
+    },
+    "hamming": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float"
+        },
+        "return_type": "waveform"
+    },
+    "hann": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float"
+        },
+        "return_type": "waveform"
+    },
+    "rect": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float"
+        },
+        "return_type": "waveform"
+    },
+    "marker": {
+        "inputs": {
+            "samples": "int",
+            "marker_value": "float"
+        },
+        "return_type": "waveform"
+    },
+    "rand": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "mean": "float",
+            "std_dev": "float"
+        },
+        "return_type": "waveform"
+    },
+    "randomGauss": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "mean": "float",
+            "std_dev": "float"
+        },
+        "return_type": "waveform"
+    },
+    "randomUniform": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "mean": "float",
+            "std_dev": "float"
+        },
+        "return_type": "waveform"
+    },
+    "chirp": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "start_freq": "float",
+            "stop_freq": "float",
+            "phase": "angle"
+        },
+        "return_type": "waveform"
+    },
+    "rrc": {
+        "inputs": {
+            "samples": "int",
+            "amplitude": "float",
+            "position": "int",
+            "beta": "float",
+            "width": "int"
+        },
+        "return_type": "waveform"
+    }
+}

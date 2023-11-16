@@ -1,0 +1,9 @@
+{
+    "settings": [
+        ["/SGCHANNELS/0/OUTPUT/ON", 1],
+        ["/SGCHANNELS/0/AWG/DIOZSYNCSWITCH", 1],
+        ["/SGCHANNELS/0/AWG/MODULATION/ENABLE", 1],
+        ["/SGCHANNELS/0/SINES/0/HARMONIC", 1],
+        ["/SYSTEM/CLOCKS/REFERENCECLOCK/IN/SOURCE", 2]
+    ]
+}

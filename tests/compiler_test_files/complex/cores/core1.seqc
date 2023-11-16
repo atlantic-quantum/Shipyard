@@ -1,0 +1,49 @@
+wave wfm_arb = vect(-1.0, 0.5, 0.25, -0.75, -1.0, 0.5, 0.25, -0.75, -1.0, 0.5, 0.25, -0.75, -1.0, 0.5, 0.25, -0.75, -1.0, 0.5, 0.25, -0.75, -1.0, 0.5, 0.25, -0.75, -1.0, 0.5, 0.25, -0.75, -1.0, 0.5, 0.25, -0.75);
+var feedback_bit;
+void _ZN5reset_PN0_QN1__0_R() {
+  playZero(2000000);
+}
+void _ZN7measure_PN0_QN1__0_R() {
+  playZero(4800);
+}
+void _ZN3x90_PN0_QN1__0_R() {
+  playWave(1, gauss(32, 1.0, 16, 8) * 0.2063);
+}
+void _ZN3z90_PN0_QN1__0_R() {
+  incrementSinePhase(0, 1.5707963267948966);
+  incrementSinePhase(1, 1.5707963267948966);
+}
+void _ZN2rz_PN1_ANGLE_QN1__0_R(var theta) {
+  incrementSinePhase(0, theta);
+  incrementSinePhase(1, theta);
+}
+void _ZN2rz_PN1_1_QN1__0_R(var lit_0) {
+  incrementSinePhase(0, 1);
+  incrementSinePhase(1, 1);
+}
+void _ZN1x_PN0_QN1__0_R() {
+  _ZN3x90_PN0_QN1__0_R();
+  _ZN3x90_PN0_QN1__0_R();
+}
+void _ZN4cnot_PN0_QN2__0__1_R() {
+  playZero(2000000);
+}
+void _ZN6cphase_PN0_QN2__2__0_R() {
+  playZero(2000000);
+}
+void _ZN9arb_pulse_PN0_QN1__0_R() {
+  playWave(1, wfm_arb);
+}
+
+var shot_index;
+for ( shot_index = 0; shot_index < 99; shot_index = shot_index + 1 ) {
+  _ZN5reset_PN0_QN1__0_R();
+  _ZN1x_PN0_QN1__0_R();
+  _ZN2rz_PN1_1_QN1__0_R(1);
+  _ZN2rz_PN1_ANGLE_QN1__0_R(1.5707963267948966);
+  _ZN4cnot_PN0_QN2__0__1_R();
+  if (feedback_bit) {
+  }
+  _ZN9arb_pulse_PN0_QN1__0_R();
+  _ZN6cphase_PN0_QN2__2__0_R();
+}

@@ -1,0 +1,4 @@
+void _ZN6gate_1_PN0_QN1__0_R() {
+  executeTableEntry(2);
+}
+_ZN6gate_1_PN0_QN1__0_R();

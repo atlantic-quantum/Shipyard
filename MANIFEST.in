@@ -1,0 +1,1 @@
+include shipyard/passes/semantic_analysis/_static/*.json

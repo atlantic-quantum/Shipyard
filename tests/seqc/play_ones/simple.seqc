@@ -1,0 +1,3 @@
+playWave(1, ones(32));
+playHold(1024 - 32);
+playWave(1, ones(0));

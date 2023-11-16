@@ -1,0 +1,11 @@
+wave w_gauss = gauss(640, 1.0, 320, 50);
+wave w_rise = cut(w_gauss, 0, 319);
+wave w_fall = cut(w_gauss, 320, 639);
+wave w_flat = rect(320, 1.0);
+wave w_pulse = join(w_rise, w_flat, w_fall);
+var i = 0;
+
+while (i < 5) {
+  playWave(1, w_pulse);
+  i = i + 1;
+}

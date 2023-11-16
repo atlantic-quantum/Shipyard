@@ -1,0 +1,8 @@
+assignWaveIndex(placeholder(64), 0);
+const n_steps = 100;
+
+cvar i;
+for ( i = 0; i < n_steps; i = i + 1 ) {
+  playZero(400);
+  executeTableEntry(i);
+}

@@ -1,0 +1,16 @@
+const n_steps_freq = 40;
+const bias_start = -1.0;
+const bias_step = 0.04;
+const n_steps_flux = 50;
+waitZSyncTrigger();
+
+cvar j;
+for ( j = 0; j < n_steps_flux; j = j + 1 ) {
+
+  var i;
+  for ( i = 0; i < n_steps_freq; i = i + 1 ) {
+    playWave(1, (bias_start + j * bias_step) * ones(32));
+    playHold(4448 - 32);
+  }
+
+}

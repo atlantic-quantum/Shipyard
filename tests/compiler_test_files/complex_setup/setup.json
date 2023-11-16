@@ -1,0 +1,102 @@
+{
+    "Instruments": {
+        "hdawg1": {
+            "type": "HDAWG8",
+            "serial": "DEVXXXX"
+        },
+        "shfqa1": {
+            "type": "SHFQA4",
+            "serial": "DEVXXXXX"
+        }
+    },
+    "Ports": {
+        "dac0": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 1,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "dac1": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 2,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "dac2": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 3,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "dac3": {
+            "instrument": "shfqa1",
+            "core": {
+                "type": "QA",
+                "index": 1,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "adc0": {
+            "instrument": "shfqa1",
+            "core": {
+                "type": "QA",
+                "index": 1,
+                "channels": [
+                    2
+                ]
+            }
+        }
+    },
+    "Frames": {
+        "tx_frame_0": {
+            "port": "dac3",
+            "frequency": 5700000000
+        },
+        "rx_frame_0": {
+            "port": "adc0",
+            "frequency": 5700000000
+        },
+        "xy_frame_0": {
+            "port": "dac0",
+            "frequency": 6400000000
+        },
+        "tx_frame_1": {
+            "port": "dac3",
+            "frequency": 5800000000
+        },
+        "rx_frame_1": {
+            "port": "adc0",
+            "frequency": 5800000000
+        },
+        "xy_frame_1": {
+            "port": "dac1",
+            "frequency": 6500000000
+        },
+        "tx_frame_2": {
+            "port": "dac3",
+            "frequency": 5900000000
+        },
+        "rx_frame_2": {
+            "port": "adc0",
+            "frequency": 5900000000
+        },
+        "xy_frame_2": {
+            "port": "dac2",
+            "frequency": 6600000000
+        }
+    }
+}

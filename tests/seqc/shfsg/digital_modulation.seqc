@@ -1,0 +1,10 @@
+wave w_gauss = gauss(1024, 1.0, 512, 128);
+wave w_drag  = drag(1024, 1.0, 512, 128);
+wave m_high = marker(512, 1);
+wave m_low = marker(512, 0);
+wave m = join(m_high, m_low);
+wave w_gauss_marker = w_gauss + m;
+
+resetOscPhase();
+
+playWave(1,2, w_gauss_marker, 1,2, w_drag);

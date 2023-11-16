@@ -1,0 +1,41 @@
+{
+    "Instruments": {
+        "hdawg1": {
+            "type": "HDAWG8",
+            "serial": "DEVXXXX"
+        },
+        "shfsg1": {
+            "type": "SHFSG4",
+            "serial": "DEVXXXXX"
+        }
+    },
+    "Ports": {
+        "ch1": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 1,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "sg_ch1": {
+            "instrument": "shfsg1",
+            "core": {
+                "type": "SG",
+                "index": 1,
+                "channels": [
+                    1
+                ]
+            }
+        }
+    },
+    "Frames": {
+        "frame1": {
+            "port": "ch1",
+            "frequency": 0.0,
+            "phase": 0.0
+        }
+    }
+}

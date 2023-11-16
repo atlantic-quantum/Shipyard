@@ -1,0 +1,6 @@
+var add_function(var x, var y) {
+  return x + y;
+}
+void procedure(var arg1, var arg2) {
+  return;
+}

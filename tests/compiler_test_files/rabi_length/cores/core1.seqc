@@ -1,0 +1,12 @@
+const n_steps = 63;
+const n_shots = 2000;
+waitZSyncTrigger();
+
+var i;
+for ( i = 0; i < n_steps; i = i + 1 ) {
+
+  var j;
+  for ( j = 0; j < n_shots; j = j + 1 ) {
+  }
+
+}

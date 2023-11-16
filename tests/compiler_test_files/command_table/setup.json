@@ -1,0 +1,49 @@
+{
+    "Instruments": {
+        "hdawg1": {
+            "type": "HDAWG8",
+            "serial": "DEV8XXX"
+        },
+        "shfqa1": {
+            "type": "SHFQA4",
+            "serial": "DEV12XXX"
+        },
+        "pqsc": {
+            "type": "PQSC",
+            "serial": "DEV10ZZZ"
+        }
+    },
+    "Ports": {
+        "dac1": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 1,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "dac0": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 2,
+                "channels": [
+                    1
+                ]
+            }
+        },
+        "adc0": {
+            "instrument": "hdawg1",
+            "core": {
+                "type": "HD",
+                "index": 3,
+                "channels": [
+                    2
+                ]
+            }
+        }
+    },
+    "Frames": {}
+}

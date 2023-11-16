@@ -1,0 +1,5 @@
+executeTableEntry(0);
+void _ZN6gate_1_PN0_QN1__0_R() {
+  playZero(2400);
+}
+_ZN6gate_1_PN0_QN1__0_R();

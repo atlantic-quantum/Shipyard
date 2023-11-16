@@ -1,0 +1,2 @@
+wave wave_imag = drag(620, 1.0, 320, 10);
+playWave(1, 2, 0 * wave_imag, 1, 2, wave_imag);

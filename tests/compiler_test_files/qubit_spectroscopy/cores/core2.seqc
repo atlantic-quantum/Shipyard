@@ -1,0 +1,18 @@
+const n_steps_freq = 40;
+const n_steps_flux = 50;
+void _ZN17measure_resonator_PN0_QN1__0_R() {
+  playZero(2016);
+  startQA(QA_GEN_0, QA_INT_0, true, 0x0, 0b0);
+}
+waitZSyncTrigger();
+
+var j;
+for ( j = 0; j < n_steps_flux; j = j + 1 ) {
+
+  var i;
+  for ( i = 0; i < n_steps_freq; i = i + 1 ) {
+    playZero(2432);
+    _ZN17measure_resonator_PN0_QN1__0_R();
+  }
+
+}

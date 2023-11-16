@@ -1,0 +1,25 @@
+const start_time = 32;
+const time_step = 32;
+const n_steps = 63;
+const n_shots = 2000;
+const capture_time = 12000;
+const resonator_frequency = -300000000.0;
+const wait_time = 4000;
+playZero(400);
+setOscFreq(0, resonator_frequency);
+waitZSyncTrigger();
+
+cvar i;
+for ( i = 0; i < n_steps; i = i + 1 ) {
+
+  var j;
+  for ( j = 0; j < n_shots; j = j + 1 ) {
+    playZero(start_time + i * time_step);
+    playZero(48);
+    playZero(capture_time);
+    setTrigger(1);
+    setTrigger(0);
+    playZero(wait_time);
+  }
+
+}

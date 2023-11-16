@@ -1,0 +1,6 @@
+wave w_gauss_2 = 1.0 * gauss(8000, 1.0, 4000, 2000);
+playWave(1, w_gauss_2);
+void _ZN7my_gate_PN0_QN1__2_R() {
+  playWave(1, w_gauss_2);
+}
+_ZN7my_gate_PN0_QN1__2_R();

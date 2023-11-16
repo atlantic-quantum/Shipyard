@@ -1,0 +1,11 @@
+{
+    "settings": [
+        ["/SIGOUTS/1/ON", 1],
+        ["/SIGOUTS/1/RANGE", 5.0],
+        ["/SIGOUTS/1/DIRECT", 0],
+        ["/AWGS/0/OUTPUTS/1/HOLD", 1],
+        ["/SYSTEM/CLOCKS/REFERENCECLOCK/SOURCE", 2],
+        ["/SYSTEM/CLOCKS/SAMPLECLOCK/FREQ", 2.0e9],
+        ["/DIOS/0/MODE", 3]
+    ]
+}

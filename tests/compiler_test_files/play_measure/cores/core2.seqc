@@ -1,0 +1,12 @@
+void _ZN1x_PN0_QN1__0_R() {
+  playZero(2400);
+}
+var _ZN7measure_PN0_QN1__0_RBIT() {
+  playZero(4800);
+  startQA(QA_GEN_0, QA_INT_0, true, 0x0, 0b0);
+  return getZSyncData(ZSYNC_DATA_RAW);
+}
+var measured_bit_0;
+waitZSyncTrigger();
+_ZN1x_PN0_QN1__0_R();
+measured_bit_0 = _ZN7measure_PN0_QN1__0_RBIT();

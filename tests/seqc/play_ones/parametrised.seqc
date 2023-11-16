@@ -1,0 +1,8 @@
+const ones_duration = 1024;
+const i = 2;
+playWave(1, ones(32));
+playHold(ones_duration - 32);
+playWave(1, ones(32));
+playHold(ones_duration * i - 32);
+playWave(1, ones(32));
+playHold(i * ones_duration - 32);

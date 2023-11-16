@@ -1,0 +1,12 @@
+playWave(1, gauss(640, 1.0, 320, 50));
+
+// _test$() does not compile, "$" illeagal?
+void _test(){
+
+}
+
+// _test(1) does not compile, no literals in function/procedure definitions?
+void _test(var){
+
+}
+

@@ -1,0 +1,33 @@
+const time_start = 2000;
+const time_delta = 40000;
+const n_steps = 5;
+const n_shots = 2;
+void _ZN5xhalf_PN0_QN1__0_R() {
+  playWave(1, ones(32) * 0.2);
+  playHold(2400 - 32);
+}
+void _ZN7delay_0_PN1_DURATION_QN1__0_R(var time) {
+  playZero(time);
+}
+void _ZN7measure_PN0_QN1__0_R() {
+  playZero(4800);
+}
+void _ZN5reset_PN0_QN1__0_R() {
+  playZero(2000);
+}
+waitZSyncTrigger();
+
+var j;
+for ( j = 0; j < n_shots; j = j + 1 ) {
+
+  var i;
+  for ( i = 0; i < n_steps; i = i + 1 ) {
+    var delay_time = time_start + i * time_delta;
+    _ZN5xhalf_PN0_QN1__0_R();
+    _ZN7delay_0_PN1_DURATION_QN1__0_R(delay_time);
+    _ZN5xhalf_PN0_QN1__0_R();
+    _ZN7measure_PN0_QN1__0_R();
+    _ZN5reset_PN0_QN1__0_R();
+  }
+
+}

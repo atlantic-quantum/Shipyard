@@ -1,0 +1,13 @@
+const frequency_start = -750000000.0;
+const frequency_step = 15000000.0;
+const n_steps = 100;
+const capture_time = 2016;
+
+cvar i;
+for ( i = 0; i < n_steps; i = i + 1 ) {
+  playZero(400);
+  setOscFreq(0, frequency_start + i * frequency_step);
+  playZero(capture_time);
+  setTrigger(1);
+  setTrigger(0);
+}

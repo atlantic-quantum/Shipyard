@@ -1,0 +1,4 @@
+void _ZN3x90_PN0_QN1__0_R() {
+  playWave(1, gauss(32, 1.0, 16, 8) * 0.2063);
+}
+_ZN3x90_PN0_QN1__0_R();

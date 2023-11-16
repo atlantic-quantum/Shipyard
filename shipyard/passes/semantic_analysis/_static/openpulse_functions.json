@@ -1,0 +1,120 @@
+{
+    "newframe": {
+        "inputs": {
+            "port": "port",
+            "frequency": "float",
+            "phase": "angle"
+        },
+        "return_type": null
+    },
+    "play": {
+        "inputs": {
+            "frame": "frame",
+            "wfm": "waveform"
+        },
+        "return_type": null
+    },
+    "set_phase": {
+        "inputs": {
+            "frame": "frame",
+            "angle": "angle"
+        },
+        "return_type": null
+    },
+    "shift_phase": {
+        "inputs": {
+            "frame": "frame",
+            "angle": "angle"
+        },
+        "return_type": null
+    },
+    "get_phase": {
+        "inputs": {
+            "frame": "frame"
+        },
+        "return_type": "angle"
+    },
+    "set_frequency": {
+        "inputs": {
+            "frame": "frame",
+            "frequency": "float"
+        },
+        "return_type": null
+    },
+    "shift_frequency": {
+        "inputs": {
+            "frame": "frame",
+            "frequency": "float"
+        },
+        "return_type": null
+    },
+    "get_frequency": {
+        "inputs": {
+            "frame": "frame"
+        },
+        "return_type": "float"
+    },
+    "mix": {
+        "inputs": {
+            "wfm1": "waveform",
+            "wfm2": "waveform"
+        },
+        "return_type": "waveform"
+    },
+    "sum": {
+        "inputs": {
+            "wfm1": "waveform",
+            "wfm2": "waveform"
+        },
+        "return_type": "waveform"
+    },
+    "phase_shift": {
+        "inputs": {
+            "wfm": "waveform",
+            "angle": "angle"
+        },
+        "return_type": "waveform"
+    },
+    "scale": {
+        "inputs": {
+            "wfm": "waveform",
+            "factor": "float"
+        },
+        "return_type": "waveform"
+    },
+    "capture": {
+        "inputs": {
+            "frame": "frame",
+            "filter": "waveform"
+        },
+        "return_type": null
+    },
+    "capture_v1": {
+        "inputs": {
+            "frame": "frame",
+            "filter": "waveform"
+        },
+        "return_type": "complex"
+    },
+    "capture_v2": {
+        "inputs": {
+            "frame": "frame",
+            "filter": "waveform"
+        },
+        "return_type": "bit"
+    },
+    "capture_v3": {
+        "inputs": {
+            "frame": "frame",
+            "duration": "duration"
+        },
+        "return_type": "waveform"
+    },
+    "capture_v1_spectrum": {
+        "inputs": {
+            "frame": "frame",
+            "duration": "duration"
+        },
+        "return_type": "waveform"
+    }
+}

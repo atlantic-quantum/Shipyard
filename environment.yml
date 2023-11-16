@@ -1,0 +1,21 @@
+name: shipyard
+dependencies:
+  - python>=3.9,<3.12
+  - numpy
+  - pip
+  - pip:
+    - build
+    - pytest
+    - pytest-cov
+    - pylint
+    - isort
+    - black
+    - flake8
+    - openpulse
+    - pydantic==1.10
+    - pylint-pydantic
+    - scipy
+    - zhinst==23.6.2
+    - matplotlib
+    - pyyaml
+    - deprecated

@@ -1,0 +1,7 @@
+wave w_gauss_2 = placeholder(8000);
+assignWaveIndex(w_gauss_2, 0);
+playWave(1, w_gauss_2);
+void _ZN7my_gate_PN0_QN1__2_R() {
+  playWave(1, w_gauss_2);
+}
+_ZN7my_gate_PN0_QN1__2_R();

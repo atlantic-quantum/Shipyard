@@ -1,0 +1,12 @@
+const n_steps = 100;
+void _ZN17measure_resonator_PN0_QN1__0_R() {
+  playZero(2016);
+  startQA(QA_GEN_0, QA_INT_0, true, 0x0, 0b0);
+}
+waitZSyncTrigger();
+
+var i;
+for ( i = 0; i < n_steps; i = i + 1 ) {
+  playZero(2528);
+  _ZN17measure_resonator_PN0_QN1__0_R();
+}

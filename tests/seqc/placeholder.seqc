@@ -1,0 +1,3 @@
+wave my_wave = placeholder(50);
+assignWaveIndex(my_wave, 0);
+playWave(1, my_wave);

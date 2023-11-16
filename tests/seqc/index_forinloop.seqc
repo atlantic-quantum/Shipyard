@@ -1,0 +1,10 @@
+wave n_steps = vect(1, 2, 3, 4);
+
+var i;
+for ( i = 0; i < n_steps[3]; i = i + 1 ) {
+
+  var j;
+  for ( j = 0; j < n_steps[2]; j = j + n_steps[0] ) {
+  }
+
+}

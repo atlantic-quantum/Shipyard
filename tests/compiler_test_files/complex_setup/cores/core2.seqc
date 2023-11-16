@@ -1,0 +1,31 @@
+var feedback_bit;
+void _ZN5reset_PN0_QN1__1_R() {
+  playZero(2000000);
+}
+void _ZN7measure_PN0_QN1__1_R() {
+  playZero(4800);
+}
+void _ZN3x90_PN0_QN1__1_R() {
+  playWave(1, gauss(32, 1.0, 16, 8) * 0.2063);
+}
+void _ZN3z90_PN0_QN1__1_R() {
+  incrementSinePhase(0, 1.5707963267948966);
+  incrementSinePhase(1, 1.5707963267948966);
+}
+void _ZN3y90_PN0_QN1__1_R() {
+  _ZN3z90_PN0_QN1__1_R();
+  _ZN3x90_PN0_QN1__1_R();
+}
+void _ZN4cnot_PN0_QN2__0__1_R() {
+  playZero(2000000);
+}
+
+var shot_index;
+for ( shot_index = 0; shot_index < 99; shot_index = shot_index + 1 ) {
+  _ZN5reset_PN0_QN1__1_R();
+  _ZN3y90_PN0_QN1__1_R();
+  _ZN4cnot_PN0_QN2__0__1_R();
+  _ZN7measure_PN0_QN1__1_R();
+  if (feedback_bit) {
+  }
+}
