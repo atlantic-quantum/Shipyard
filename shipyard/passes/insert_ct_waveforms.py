@@ -27,7 +27,7 @@ class InsertCTWaveforms(QASMTransformer):
 
     @staticmethod
     def add_assignWaveIndex(
-        waveform_set: set(tuple[int, int])
+        waveform_set: set[tuple[int, int]]
     ) -> ast.CalibrationStatement:
         """
         Create list of openQASM statements to of
