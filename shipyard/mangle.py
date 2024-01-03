@@ -183,8 +183,8 @@ class FunctionSignature(BaseModel):
     """
 
     name: str
-    params: list[str] = Field(default_factory=lambda: [])
-    qubits: list[str] = Field(default_factory=lambda: [])
+    params: list[str | None] = Field(default_factory=lambda: [])
+    qubits: list[str | None] = Field(default_factory=lambda: [])
     return_type: str = ""
 
     def mangle(self) -> str:
@@ -284,7 +284,7 @@ class FunctionSignature(BaseModel):
 class Mangler(LiteralVisitor, TypeVisitor, GenericVisitor):
     """
     QASMVisitor that visits CalibrationDefinition or QuantumGate nodes to gather
-    the iformation required to mangle function definition signatures and function calls
+    the information required to mangle function definition signatures and function calls
     """
 
     def __init__(

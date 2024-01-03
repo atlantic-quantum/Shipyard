@@ -12,10 +12,10 @@ dependencies:
     - black
     - flake8
     - openpulse
-    - pydantic==1.10
+    - pydantic==2.5.3
     - pylint-pydantic
     - scipy
-    - zhinst==23.6.2
+    - zhinst==25.10.3
     - matplotlib
     - pyyaml
     - deprecated
