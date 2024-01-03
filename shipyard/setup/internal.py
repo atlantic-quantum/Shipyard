@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 import yaml
-from pydantic import BaseModel, validator
+from pydantic import BaseModel, validator, field_validator
 
 from ..awg_core import CORE_TYPE_TO_CLASS, AWGCore, CoreType
 from ..duration import Duration
@@ -83,15 +83,15 @@ class Port(BaseModel):
             """
             return CORE_TYPE_TO_CLASS[self.type]
 
-        @validator("channels")
+        @field_validator("channels")
         def not_more_channels_than_core_type_allows(cls, channels: list[int], values):
             """
             Validates that the number of channels for the Core object does
             not exceed the number of channels allowed by the CoreType
             """
             assert channels
-            assert "type" in values
-            assert len(channels) <= CORE_TYPE_TO_CLASS[values["type"]].n_channels
+            assert "type" in values.data
+            assert len(channels) <= CORE_TYPE_TO_CLASS[values.data["type"]].n_channels
             return channels
 
     name: str

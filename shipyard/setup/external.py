@@ -148,7 +148,7 @@ class SetupExternal(BaseModel):
         path = Path(path)
         match path.suffix:
             case ".json":
-                setup = cls.parse_file(path)
+                setup = cls.model_validate_json(path.read_text(encoding="utf-8"))
             case ".yml":
                 setup = cls(**yaml.safe_load(path.read_text(encoding="utf-8")))
             case _:
@@ -180,9 +180,9 @@ class SetupExternal(BaseModel):
         path = Path(path)
         match path.suffix:
             case ".json":
-                path.write_text(self.json(), encoding="utf-8")
+                path.write_text(self.model_dump_json(), encoding="utf-8")
             case ".yml":
-                path.write_text(yaml.dump(self.dict()), encoding="utf-8")
+                path.write_text(yaml.dump(self.model_dump()), encoding="utf-8")
             case _:
                 raise ValueError(f"Unknown file extension: {path.suffix}")
         return path
@@ -364,7 +364,7 @@ class SetupExternal(BaseModel):
         Returns:
             SetupInternal: internal setup representation
         """
-        return SetupInternal.from_dict(self.dict())
+        return SetupInternal.from_dict(self.model_dump())
 
     @classmethod
     def from_internal(cls, internal: SetupInternal) -> "SetupExternal":

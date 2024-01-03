@@ -18,7 +18,7 @@ for zi:seqc based on
 import json
 from pathlib import Path
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, validator, field_validator
 
 from .symbols import ClassicalSymbol, ExternSymbol
 
@@ -48,9 +48,9 @@ class FunctionSignature(BaseModel):
     """
 
     inputs: dict[str, str] = Field(default_factory=lambda: {})
-    return_type: str = None
+    return_type: str | None = None
 
-    @validator("inputs")
+    @field_validator("inputs")
     def make_input_type_upper_case(cls, inputs: dict[str, str]):
         """Ensures that the type names are uppercase such that thay match
         the symbol names for built in type (see symbols.py for details)

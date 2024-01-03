@@ -6,7 +6,7 @@ Based on
     https://openqasm.com/language/openpulse.html
 """
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, validator, field_validator
 
 _BUILTIN_CLASSICAL_SYMBOL_NAMES = [
     "ANGLE",
@@ -34,9 +34,9 @@ class Symbol(BaseModel):
     """Base class for Symbols"""
 
     name: str
-    kind: str = None
+    kind: str | None = None
 
-    @validator("kind")
+    @field_validator("kind")
     def force_kind_uppercase(cls, kind: str) -> str:
         """If the string 'kind' is not None make it uppercase
 
@@ -51,7 +51,7 @@ class Symbol(BaseModel):
         return kind
 
 
-def kind_of_builtin_is_none(kind: str) -> str:
+def kind_of_builtin_is_none(kind: str | None) -> None:
     """A function to validate that built in symbols have no kind
 
     Args:
@@ -61,7 +61,7 @@ def kind_of_builtin_is_none(kind: str) -> str:
         str: the kind of the built in symbol
     """
     assert kind is None
-    return kind
+    return None
 
 
 class BuiltinSymbol(Symbol):
@@ -87,7 +87,7 @@ class BuiltinSymbol(Symbol):
     QUBIT
     """
 
-    _validate_kind = validator("kind", allow_reuse=True)(kind_of_builtin_is_none)
+    _validate_kind = field_validator("kind")(kind_of_builtin_is_none)
 
 
 angle_type = BuiltinSymbol(name="ANGLE")
@@ -138,7 +138,7 @@ class BuiltinCalSymbol(Symbol):
     WAVEFORM
     """
 
-    _validate_kind = validator("kind", allow_reuse=True)(kind_of_builtin_is_none)
+    _validate_kind = field_validator("kind")(kind_of_builtin_is_none)
 
 
 port_type = BuiltinCalSymbol(name="PORT")
@@ -168,7 +168,7 @@ class ArraySymbol(Symbol):
     dimension: list[int]
     base_type: str
 
-    @validator("kind")
+    @field_validator("kind")
     def kind_is_array(cls, kind: str) -> str:
         """returns the input string if it is 'ARRAY' (kind of ArraySymbol is ARRAY)
 
@@ -181,7 +181,7 @@ class ArraySymbol(Symbol):
         assert kind.upper() == "ARRAY"
         return kind.upper()
 
-    @validator("base_type")
+    @field_validator("base_type")
     def array_base_type_must_be_of_allowed_type(cls, base_type: str) -> str:
         """returns the input string if it is a valid name for an array type
         else raises assertion error (that is turned into a validation error by
@@ -224,7 +224,7 @@ class ClassicalSymbol(Symbol):
     (i.e. BuiltinSymbol/BuiltinCalSymbol but not QUBIT)
     """
 
-    _validate_classical = validator("kind", allow_reuse=True)(
+    _validate_classical = field_validator("kind")(
         kind_must_be_name_of_classical_type
     )
 
@@ -240,7 +240,7 @@ class ConstantSymbol(Symbol):
     (i.e. BuiltinSymbol/BuiltinCalSymbol but not QUBIT)
     """
 
-    _validate_classical = validator("kind", allow_reuse=True)(
+    _validate_classical = field_validator("kind")(
         kind_must_be_name_of_classical_type
     )
 
@@ -256,7 +256,7 @@ class IOSymbol(Symbol):
     https://openqasm.com/language/directives.html#input-output
     """
 
-    _validate_classical = validator("kind", allow_reuse=True)(
+    _validate_classical = field_validator("kind")(
         kind_must_be_name_of_classical_type
     )
 
@@ -266,7 +266,7 @@ class QuantumSymbol(Symbol):
     A symbol representing quantum objects, i.e., either a qubit or a qubit register
     """
 
-    @validator("kind")
+    @field_validator("kind")
     def kind_must_be_name_of_quantum_type(cls, kind: str) -> str:
         """if the input string is a name of a quantum type it is returned else a
         validation error is raised
@@ -296,9 +296,9 @@ class SubroutineSymbol(Symbol):
     """
 
     params: list[Symbol] = Field(default_factory=lambda: [])
-    return_type: str = None
+    return_type: str | None = None
 
-    @validator("return_type")
+    @field_validator("return_type")
     def return_classical_or_none(cls, return_type: str):
         """If the return type is a classical type or an array it is returned
         in upper case format, else a ValidationError is raised
